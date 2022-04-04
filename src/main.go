@@ -9,6 +9,9 @@ func main() {
 	router := gin.Default()
 	router.Static("/static", "./static")
 	router.LoadHTMLGlob("templates/*")
+	router.GET("/", func(c *gin.Context) {
+		c.Redirect(http.StatusMovedPermanently, "/home")
+	})
 	router.GET("/home", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "home.tmpl", gin.H{
 			"title":   "Jukebox-3000",
