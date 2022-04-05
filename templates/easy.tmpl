@@ -1,13 +1,76 @@
 {{ define "easy.tmpl" }}
 <html>
-	<h1>
-		{{ .title }}
-	</h1>
-	<h2>
-	    {{ .heading }}
-	</h2>
+    <head>
+        <link rel="stylesheet" href="/static/stylesheets/index.css" >
+        <script type="text/javascript" src="/static/stylesheets/slider.js"> </script>
+    </head>
 	<body>
-	    <a href = "/home">Home</a><br>
+	<div id= "wrap">
+	<h1>
+    	{{ .title }}
+    </h1>
+    <h2>
+         {{ .heading }}
+    </h2>
+    <h3>
+        <a href="/home" class="button">Home</a>
+    </h3>
+    <div class="container">
+      <div class="mySlides fade">
+        <div class="number">1 / 7</div>
+        <img src="static/img/easy/1.png" style="width:100%">
+        <div class="text">"End of the Earth", Lord Huron, Lonesome Dreams</div>
+        <a href="https://www.youtube.com/watch?v=-MH-UmYkXiM" class="button" target="_blank">Play Song</a>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="number">2 / 7</div>
+        <img src="static/img/easy/2.png" style="width:100%">
+        <div class="text">"Believe Me", Dalton Day, Believe Me</div>
+        <a href="https://www.youtube.com/watch?v=wLOUS2p3jhw" class="button" target="_blank">Play Song</a>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="number">3 / 7</div>
+        <img src="static/img/easy/3.png" style="width:100%">
+        <div class="text">"By Your Side", The 1975, By Your Side - Single</div>
+        <a href="https://www.youtube.com/watch?v=6dBVYN9pjk0" class="button" target="_blank">Play Song</a>
+      </div>
+
+      <div class="mySlides fade">
+         <div class="number">4 / 7</div>
+         <img src="static/img/easy/4.png" style="width:100%">
+         <div class="text">"Bloom", The Paper Kites, Woodland</div>
+         <a href="https://www.youtube.com/watch?v=8inJtTG_DuU" class="button" target="_blank">Play Song</a>
+      </div>
+
+     <div class="mySlides fade">
+       <div class="number">5 / 7</div>
+       <img src="static/img/easy/5.png" style="width:100%">
+       <div class="text">"IDK You Yet", Alexander 23, IDK You Yet - Single</div>
+       <a href="https://www.youtube.com/watch?v=LoY6nmmjnHM" class="button" target="_blank" >Play Song</a>
+    </div>
+
+    <div class="mySlides fade">
+       <div class="number">6 / 7</div>
+       <img src="static/img/easy/6.png" style="width:100%">
+       <div class="text">"New Religion", The Heydaze, New Religion - Single</div>
+       <a href="https://www.youtube.com/watch?v=F5JBwEXxLpA" class="button" target="_blank" >Play Song</a>
+    </div>
+
+    <div class="mySlides fade">
+       <div class="number">7 /7</div>
+       <img src="static/img/easy/7.png" style="width:100%">
+       <div class="text">"3 am", Matchbox Twenty, Exile On Mainstream</div>
+       <a href="https://www.youtube.com/watch?v=C-Naa1HXeDQ" class="button" target="_blank" >Play Song</a>
+    </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
     </body>
 </html>
+
 {{ end }}

@@ -1,24 +1,74 @@
 {{ define "eighties.tmpl" }}
 <html>
-	<h1>
-		{{ .title }}
-	</h1>
-	<h2>
-	    {{ .heading }}
-	</h2>
+    <head>
+        <link rel="stylesheet" href="/static/stylesheets/index.css" >
+        <script type="text/javascript" src="/static/stylesheets/slider.js"> </script>
+    </head>
 	<body>
-	<div class="column">
-          <img src="static/img/eighties/1.png">
-          <img src="static/img/eighties/2.png">
-          <img src="static/img/eighties/3.png">
-    </div>
-    <div class="column2">
-         <img src="static/images/eighties/4.png">
-         <img src="static/images/eighties/5.png">
-         <img src="static/images/eighties/6.png">
-         <img src="static/images/eighties/7.png">
-    </div>
-    <a href = "/home">Home</a><br>
+	<div id= "wrap">
+	<h1>
+        {{ .title }}
+    </h1>
+    <h2>
+    	{{ .heading }}
+    </h2>
+    <h3>
+        <a href="/home" class="button">Home</a>
+    </h3>
+	<div class="container">
+          <div class="mySlides fade">
+            <div class="number">1 / 7</div>
+            <img src="static/img/eighties/1.png" style="width:100%">
+            <div class="text">"Dreams", Fleetwood Mac, Rumors</div>
+            <a href="https://www.youtube.com/watch?v=Y3ywicffOj4" class="button" target="_blank">Play Song</a>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="number">2 / 7</div>
+            <img src="static/img/eighties/2.png" style="width:100%">
+            <div class="text">"You Make My Dreams Come True", Daryl Hall & John Oates, Greatest Hits--Rock 'n' Soul</div>
+            <a href="https://www.youtube.com/watch?v=EErSKhC0CZs" class="button" target="_blank">Play Song</a>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="number">3 / 7</div>
+            <img src="static/img/eighties/3.png" style="width:100%">
+            <div class="text">"Heaven's On Fire", Kiss, Greatest Hits</div>
+             <a href="https://www.youtube.com/watch?v=EZjevnnkA20" class="button" target="_blank">Play Song</a>
+          </div>
+
+          <div class="mySlides fade">
+             <div class="number">4 / 7</div>
+             <img src="static/img/eighties/4.png" style="width:100%">
+             <div class="text">"Purple Rain", Prince, The Hits/B-Side</div>
+             <a href="https://www.youtube.com/watch?v=TvnYmWpD_T8" class="button" target="_blank">Play Song</a>
+          </div>
+
+         <div class="mySlides fade">
+           <div class="number">5 / 7</div>
+           <img src="static/img/eighties/5.png" style="width:100%">
+           <div class="text">"Bohemian Rhapsody", Queen, Greatest Hits I II & III</div>
+           <a href="https://www.youtube.com/watch?v=fJ9rUzIMcZQ" class="button" target="_blank">Play Song</a>
+        </div>
+
+        <div class="mySlides fade">
+           <div class="number">6 / 7</div>
+           <img src="static/img/eighties/6.png" style="width:100%">
+           <div class="text">"Unchained Melody", The Righteous Brothers, The Very Best of the Righteous Brothers</div>
+           <a href="https://www.youtube.com/watch?v=IYj2hex99gY" class="button" target="_blank">Play Song</a>
+        </div>
+
+        <div class="mySlides fade">
+           <div class="number">7 /7</div>
+           <img src="static/img/eighties/7.png" style="width:100%">
+           <div class="text">"With or Without You", U2, The Best of 1980-1990</div>
+           <a href="https://www.youtube.com/watch?v=ujNeHIo7oTE" class="button" target="_blank">Play Song</a>
+        </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
     </body>
 </html>
 {{ end }}

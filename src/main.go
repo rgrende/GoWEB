@@ -1,10 +1,16 @@
+//This is a simple GO Web Project that simulates a jukebox. It consists of three linked pages
+//two stylesheets, and three HTML templates. The project address is http://localhost:8080/home
+//you will be redirected to the home page.
+
 package main
 
+//GO imports
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
+//main function
 func main() {
 	router := gin.Default()
 	router.Static("/static", "./static")
@@ -21,6 +27,7 @@ func main() {
 			"image":   "/static/img/jukebox.png",
 		})
 	})
+	//GET 80s page
 	router.GET("/eighties", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "eighties.tmpl", gin.H{
 			"title":   "Jukebox-3000",
@@ -28,6 +35,7 @@ func main() {
 			"link3":   "Home",
 		})
 	})
+	//GET Easy Listening page
 	router.GET("/easy", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "easy.tmpl", gin.H{
 			"title":   "Jukebox-3000",
@@ -35,6 +43,5 @@ func main() {
 			"link3":   "Home",
 		})
 	})
-
 	router.Run(":8080")
 }

@@ -1,16 +1,91 @@
-heading {
+h1 {
+    alignment: center;
     background-color: black;
     font-family: Futura;
     color: white;
+    font-size: 60pt;
+    font-style: italic;
+}
+
+h2 {
+    alignment: center;
+    background-color: black;
+    font-family: Futura;
+    color: white;
+    font-size: 40pt;
+    text-align: center;
 }
 
 body {
+    text-align: center;
     background-color: black;
     font-family: Futura;
     color: white;
+    display: table;
+    margin: auto;
+    font-size: 40pt;
 }
 
 img {
-    width: auto;
-    height: auto;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+.button {
+    background-color: fuchsia;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    width: fit-content;
+    padding: 5px 15px;
+    margin: auto;
+}
+
+.button:hover {
+    background-color: turquoise;
+    color: white;
+}
+
+
+.container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.number {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+}
+.prev, .next{
+    margin: auto;
+    padding: 50px 50px;
+    left: -75px;
+    right: -75px;
 }

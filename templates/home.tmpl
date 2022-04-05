@@ -2,16 +2,18 @@
 <head>
     <link rel="stylesheet" href="/static/stylesheets/index.css" >
 </head>
-	<h1>
-		{{ .title }}
-	</h1>
-	<h2>
-	    {{ .heading }}
-	</h2>
 	<body>
-	  <a href = "/eighties">Best of the 80s</a><br>
-	  <a href = "/easy">Easy Listening</a><br>
-      <img src = {{ .image }} >
-
+	<h1>
+    	{{ .title }}
+    </h1>
+    <h2>
+        {{ .heading }}
+    </h2>
+    <h3>
+	  <a href="/eighties" class="button">Best of the 80s</a>
+	  <a href="/easy" class="button">Easy Listening</a>
+	</h3>
+	<img src = {{ .image }} >
     </body>
+
 </html>
